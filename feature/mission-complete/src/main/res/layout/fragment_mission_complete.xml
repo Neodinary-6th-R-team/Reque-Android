@@ -16,44 +16,74 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_year"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/img_success"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="33dp"
-                android:fontFamily="@font/pretendard_medium"
-                android:textColor="@color/gray300"
-                android:textSize="18sp"
+                android:layout_margin="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_mission_success"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="2024" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_date"
+                android:id="@+id/tv_mission_success_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="33dp"
                 android:fontFamily="@font/pretendard_semibold"
-                android:textColor="@color/gray700"
-                android:textSize="24sp"
+                android:text="오늘도 멋진 기록을 남기셨네요"
+                android:textColor="@color/gray300"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_year"
-                tools:text="6월 1일 토요일" />
+                app:layout_constraintTop_toBottomOf="@id/img_success" />
+
+
+            <ImageView
+                android:id="@+id/tv_point"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:src="@drawable/ic_point"
+                android:text="1"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_point_description"
+                app:layout_constraintEnd_toStartOf="@id/tv_point_description"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_point_description" />
+
+            <TextView
+                android:id="@+id/tv_point_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pretendard_bold"
+                android:includeFontPadding="false"
+                android:text="포인트가 적립 되었어요"
+                android:textColor="@color/gray700"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_point"
+                app:layout_constraintTop_toBottomOf="@id/tv_mission_success_title" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_today_mission"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="13dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="52dp"
                 android:background="@drawable/bg_common_gray_button"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_date">
+                app:layout_constraintTop_toBottomOf="@id/tv_point_description">
 
                 <ImageView
-                    android:id="@+id/img_back"
+                    android:id="@+id/iv_back"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="24dp"
@@ -83,10 +113,10 @@
                     android:fontFamily="@font/pretendard_semibold"
                     android:paddingHorizontal="20dp"
                     android:paddingBottom="19dp"
-                    android:textColor="@color/gray700"
+                    android:textColor="@color/gray800"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_today_mission_title"
                     app:layout_constraintTop_toBottomOf="@id/tv_today_mission_title"
                     tools:text="미션미션미션미션미션미션미션미션미션미션션미션미션미션미션미션미션미션미션미션미션미션미" />
 
@@ -96,41 +126,25 @@
                 android:id="@+id/iv_add_mission_img_background"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/bg_mission_picture_add"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout_today_mission" />
 
             <TextView
-                android:id="@+id/tv_add_mission"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_img_add"
-                android:drawablePadding="6dp"
-                android:fontFamily="@font/pretendard_semibold"
-                android:gravity="center"
-                android:text="등록하기"
-                android:textColor="@color/blue300"
-                app:layout_constraintBottom_toBottomOf="@id/iv_add_mission_img_background"
-                app:layout_constraintEnd_toEndOf="@id/iv_add_mission_img_background"
-                app:layout_constraintStart_toStartOf="@id/iv_add_mission_img_background"
-                app:layout_constraintTop_toTopOf="@id/iv_add_mission_img_background" />
-
-            <EditText
                 android:id="@+id/edit_mission"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_mission_edit"
                 android:fontFamily="@font/pretendard_medium"
                 android:gravity="start"
-                android:hint="오늘 미션을 하면서 느낀 점을 입력해 주세요.\n(10자 이상 255 이하)"
                 android:paddingHorizontal="16dp"
                 android:paddingTop="13dp"
+                android:text=""
                 android:textColor="@color/gray300"
                 android:textSize="14sp"
                 app:layout_constraintDimensionRatio="1:1"
@@ -138,21 +152,43 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_add_mission_img_background" />
 
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_common_gray_button"
+                android:elevation="0dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:paddingVertical="16dp"
+                android:stateListAnimator="@null"
+                android:text="확인"
+                android:textColor="@color/blue300"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_reigst"
+                app:layout_constraintEnd_toStartOf="@id/btn_reigst"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_reigst" />
 
             <Button
                 android:id="@+id/btn_reigst"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/bg_common_button_topleft_topright"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_common_button"
+                android:elevation="0dp"
                 android:fontFamily="@font/pretendard_semibold"
                 android:paddingVertical="18dp"
-                android:text="등록하기"
+                android:stateListAnimator="@null"
+                android:text="자랑하기"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_confirm"
                 app:layout_constraintTop_toBottomOf="@id/edit_mission" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
