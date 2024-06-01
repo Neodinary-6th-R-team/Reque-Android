@@ -9,8 +9,10 @@ pluginManagement {
     }
 }
 
-rootProject.name = "reque"
+rootProject.name = "Reque"
 include(":app")
 include(":feature")
 include(":feature:splash")
 include(":common-ui")
+include(":domain")
+include(":data")

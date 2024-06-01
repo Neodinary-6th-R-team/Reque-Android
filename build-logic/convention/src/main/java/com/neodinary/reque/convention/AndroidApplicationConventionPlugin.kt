@@ -63,6 +63,8 @@ class AndroidApplicationConventionPlugin : Plugin<Project>{
                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
                 dependencies {
                     add("implementation", project(":feature:splash"))
+                    add("implementation", project(":common-ui"))
+                    add("implementation", project(":domain"))
 
                     // Android Common
                     add("implementation", libs.findLibrary("androidx-core").get())
