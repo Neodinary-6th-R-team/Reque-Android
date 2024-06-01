@@ -2,10 +2,30 @@
 <resources>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="black_trans20">#33000000</color>
-    <color name="gray300">#9FA5B7</color>
-    <color name="gray700">#3B404E</color>
-    <color name="gray25">#F7F9FC</color>
-    <color name="blue25">#404778FF</color>
-    <color name="blue50">#804778FF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="gray25">#f7f9fc</color>
+    <color name="gray50">#f6f7f8</color>
+    <color name="gray75">#e9eaee</color>
+    <color name="gray100">#d9dce2</color>
+    <color name="gray200">#bcc1cd</color>
+    <color name="gary300">#9fa5b7</color>
+    <color name="gray400">#828aa1</color>
+    <color name="gary500">#677089</color>
+    <color name="gray600">#51586c</color>
+    <color name="gray700">#3b404e</color>
+    <color name="gray800">#252931</color>
+
+    <color name="blue25">#f5f7ff</color>
+    <color name="blue100">#d9e3ff</color>
+    <color name="blue200">#b6c7ff</color>
+    <color name="blue300">#8dabff</color>
+    <color name="blue600">#4778ff </color>
+
+    <color name="sub_pink">#f8d5e5</color>
+    <color name="sub_green">#ddffb5</color>
+
+    <color name="sub_pink_trans_60">#99F8D5E5</color>
+    <color name="sub_pink_trans_80">#CCF8D5E5</color>
+
 </resources>

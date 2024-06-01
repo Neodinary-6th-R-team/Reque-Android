@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="date"
+            type="String" />
+        <variable
+            name="isSelected"
+            type="Boolean" />
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="@{date}"
+        android:onClick="@{clickListener}"
+        bind:backgroundResource="@{isSelected}"/>
+
+</layout>
+
