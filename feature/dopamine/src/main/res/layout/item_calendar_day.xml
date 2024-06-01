@@ -10,23 +10,24 @@
             name="isSelected"
             type="Boolean" />
         <variable
+            name="hasLog"
+            type="Boolean" />
+        <variable
             name="clickListener"
             type="android.view.View.OnClickListener" />
     </data>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:fontFamily="@font/pretendard_semibold"
         android:textSize="11sp"
         android:gravity="center"
-        android:paddingTop="15dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        android:paddingBottom="15dp"
+        android:padding="8dp"
         android:text="@{date}"
         android:onClick="@{clickListener}"
-        bind:backgroundResource="@{isSelected}"/>
-
+        android:textColor="@{hasLog ? @color/blue600 : @color/gray600}"
+        android:background="@{isSelected ? @drawable/bg_circle_blue25 : (hasLog ? @drawable/ic_record_exist : @drawable/bg_empty)}" />
 </layout>
 

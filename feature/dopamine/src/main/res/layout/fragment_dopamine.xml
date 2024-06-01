@@ -206,7 +206,7 @@
                     app:layout_constraintStart_toEndOf="@id/tv_today"
                     app:layout_constraintTop_toTopOf="parent"
                     android:fontFamily="@font/pretendard_medium"
-                    android:text="6월 1일"
+                    android:text="@{viewModel.todayDateText}"
                     android:textColor="@color/gray400"
                     android:textSize="16sp" />
 
@@ -217,7 +217,7 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_today"
                     app:layout_constraintStart_toStartOf="parent"
                     android:fontFamily="@font/pretendard_semibold"
-                    android:text="4일 연속 성장중"
+                    android:text="@{viewModel.todayContentText}"
                     android:textColor="@color/blue600"
                     android:textSize="22sp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -243,12 +243,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pretendard_semibold"
-                    android:text="네이버 지도를 켜서\n'카페' 탭 10번째 장소에 방문해보기"
+                    android:text="@{viewModel.todayMissionText}"
                     android:textColor="#51586C"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <TextView
                     android:id="@+id/tv_date"
@@ -256,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/pretendard_semibold"
-                    android:text="2024.06.09"
+                    android:text="@{viewModel.todayDate}"
                     android:textColor="@color/blue600"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -269,22 +268,11 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/pretendard_semibold"
-                    android:text="완료"
+                    android:text="@{viewModel.checkText}"
                     android:textColor="@color/blue600"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@id/tv_date"
                     app:layout_constraintTop_toBottomOf="@id/tv_today_mission" />
-
-                <View
-                    android:id="@+id/view_check"
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/ic_sel_check"
-                    android:visibility="visible"
-                    app:layout_constraintStart_toEndOf="@id/tv_check"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_today_mission" />
 
                 <View
                     android:id="@+id/view_uncheck"
@@ -297,6 +285,17 @@
                     app:layout_constraintStart_toEndOf="@id/tv_check"
                     app:layout_constraintTop_toBottomOf="@+id/tv_today_mission" />
 
+                <View
+                    android:id="@+id/view_check"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/ic_sel_check"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@id/tv_check"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_today_mission" />
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:visibility="visible"
@@ -306,7 +305,6 @@
                     app:layout_constraintBottom_toBottomOf="parent">
 
                     <View
-
                         android:id="@+id/view_heart"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
@@ -329,12 +327,8 @@
                         app:layout_constraintStart_toEndOf="@id/view_heart"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
