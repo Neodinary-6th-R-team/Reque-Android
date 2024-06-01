@@ -21,7 +21,7 @@
             android:fontFamily="@font/pretendard_semibold"
             android:lineHeight="30dp"
             android:text="나만의 행복 도파민을\n찾아볼까요?"
-            android:textColor="#4778FF"
+            android:textColor="@color/blue600"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,12 +32,23 @@
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="39dp"
-            android:background="@drawable/bg_rect_gray50_round20"
+            android:background="@drawable/rect_transparent_blue25_round16"
             android:padding="20dp"
             app:layout_constraintBottom_toTopOf="@id/btn_record"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_title">
+
+            <ImageView
+                android:id="@+id/iv_main_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_mission_main"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_mission_title"
@@ -45,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pretendard_semibold"
                 android:text="오늘의 미션"
-                android:textColor="#9FA5B7"
+                android:textColor="@color/gray300"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +68,7 @@
                 android:layout_marginTop="6dp"
                 android:fontFamily="@font/pretendard_semibold"
                 android:text="네이버 지도를 켜서\n'카페' 탭 10번째 장소에\n방문해보기"
-                android:textColor="#252931"
+                android:textColor="@color/gray800"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_mission_title" />
@@ -71,7 +82,7 @@
             android:layout_height="60dp"
             android:layout_marginBottom="29dp"
             android:background="@drawable/bg_rect_blue300_round12"
-            android:backgroundTint="#8DABFF"
+            android:backgroundTint="@color/blue300"
             android:fontFamily="@font/pretendard_semibold"
             android:text="기록하기"
             android:textColor="@color/white"

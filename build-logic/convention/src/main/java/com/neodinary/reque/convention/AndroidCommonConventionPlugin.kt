@@ -17,6 +17,7 @@ class AndroidCommonConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                add("implementation", libs.findLibrary("glide-transformations").get())
                 add("implementation", libs.findLibrary("androidx-core").get())
                 add("implementation", libs.findLibrary("androidx-appcompat").get())
                 add("implementation", libs.findLibrary("android-material").get())

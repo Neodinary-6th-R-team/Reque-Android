@@ -62,8 +62,12 @@ class AndroidApplicationConventionPlugin : Plugin<Project>{
 
                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
                 dependencies {
-                    add("implementation", project(":feature:splash"))
                     add("implementation", project(":common-ui"))
+                    add("implementation", project(":feature:home"))
+                    add("implementation", project(":feature:login"))
+                    add("implementation", project(":feature:mission-complete"))
+                    add("implementation", project(":feature:mission-record"))
+                    add("implementation", project(":feature:splash"))
                     add("implementation", project(":domain"))
                     add("implementation", project(":feature:dopamine"))
                     add("implementation", project(":feature:mypage"))
