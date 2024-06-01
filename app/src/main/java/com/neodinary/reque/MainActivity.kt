@@ -8,19 +8,23 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.util.Utility
+import com.neodinary.reque.common.ui.base.BaseActivity
+import com.neodinary.reque.databinding.ActivityMainBinding
+import com.neodinary.reque.dopamine.DopamineFragment
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+    override val layoutResourceId: Int
+        get() = R.layout.activity_main
 
+    override fun init() {
+        binding.bottomNavi.itemIconTintList = null
 
-        Log.d("TAG", "onCreate: ${Utility.getKeyHash(this)}")
+        // 초기 프래그먼트 설정
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, DopamineFragment())
+            .commit()
+
     }
+
+
 }

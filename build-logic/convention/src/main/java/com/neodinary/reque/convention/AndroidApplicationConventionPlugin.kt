@@ -69,6 +69,8 @@ class AndroidApplicationConventionPlugin : Plugin<Project>{
                     add("implementation", project(":feature:mission-record"))
                     add("implementation", project(":feature:splash"))
                     add("implementation", project(":domain"))
+                    add("implementation", project(":feature:dopamine"))
+                    add("implementation", project(":feature:mypage"))
 
                     // Android Common
                     add("implementation", libs.findLibrary("androidx-core").get())
