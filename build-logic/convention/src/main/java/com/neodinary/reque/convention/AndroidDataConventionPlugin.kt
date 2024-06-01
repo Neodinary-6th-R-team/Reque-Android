@@ -38,6 +38,7 @@ class AndroidDataConventionPlugin : Plugin<Project>{
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                add("implementation", project(":domain"))
 
                 // Network
                 add("implementation", libs.findLibrary("gson-gson").get())
