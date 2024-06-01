@@ -5,4 +5,7 @@
     <color name="black_trans20">#33000000</color>
     <color name="gray300">#9FA5B7</color>
     <color name="gray700">#3B404E</color>
+    <color name="gray25">#F7F9FC</color>
+    <color name="blue25">#404778FF</color>
+    <color name="blue50">#804778FF</color>
 </resources>
