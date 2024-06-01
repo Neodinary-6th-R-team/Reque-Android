@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="33dp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/gray300"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2024" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="@color/gray700"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_year"
+                tools:text="6월 1일 토요일" />
+
+            <LinearLayout
+                android:id="@+id/layout_today_mission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_date">
+
+                <TextView
+                    android:id="@+id/tv_today_mission_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:text="오늘의 미션"
+                    android:textColor="@color/gray300"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_today_mission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:paddingHorizontal="20dp"
+                    android:paddingBottom="19dp"
+                    android:textColor="@color/gray700"
+                    android:textSize="18sp"
+                    tools:text="미션미션미션미션미션미션미션미션미션미션션미션미션미션미션미션미션미션미션미션미션미션미" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_add_mission_img_background"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="33dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_mission_picture_add"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_today_mission" />
+
+            <TextView
+                android:id="@+id/tv_add_mission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_img_add"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:gravity="center"
+                android:text="등록하기"
+                android:textColor="@color/blue50"
+                app:layout_constraintBottom_toBottomOf="@id/iv_add_mission_img_background"
+                app:layout_constraintEnd_toEndOf="@id/iv_add_mission_img_background"
+                app:layout_constraintStart_toStartOf="@id/iv_add_mission_img_background"
+                app:layout_constraintTop_toTopOf="@id/iv_add_mission_img_background" />
+
+            <EditText
+                android:id="@+id/edit_mission"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="33dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_mission_edit"
+                android:fontFamily="@font/pretendard_medium"
+                android:gravity="start"
+                android:hint="오늘 미션을 하면서 느낀 점을 입력해 주세요.\n(10자 이상 255 이하)"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="13dp"
+                android:textColor="@color/gray300"
+                android:textSize="14sp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_add_mission_img_background" />
+
+
+            <Button
+                android:id="@+id/btn_reigst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_common_button_topleft_topright"
+                android:fontFamily="@font/pretendard_semibold"
+                android:paddingVertical="18dp"
+                android:text="등록하기"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_mission" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
