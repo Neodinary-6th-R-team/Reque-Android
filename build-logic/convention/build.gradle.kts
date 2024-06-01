@@ -22,6 +22,10 @@ gradlePlugin {
             id = "reque.application"
             implementationClass = "com.neodinary.reque.convention.AndroidApplicationConventionPlugin"
         }
+        register("AndroidCompose") {
+            id = "reque.compose"
+            implementationClass = "com.neodinary.reque.convention.AndroidComposeConventionPlugin"
+        }
         register("AndroidData") {
             id = "reque.data"
             implementationClass = "com.neodinary.reque.convention.AndroidDataConventionPlugin"

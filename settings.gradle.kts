@@ -11,3 +11,6 @@ pluginManagement {
 
 rootProject.name = "reque"
 include(":app")
+include(":feature")
+include(":feature:splash")
+include(":common-ui")

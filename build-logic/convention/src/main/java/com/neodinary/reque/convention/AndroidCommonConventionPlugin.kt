@@ -12,6 +12,7 @@ class AndroidCommonConventionPlugin : Plugin<Project> {
             pluginManager.apply {
                 apply("kotlin-kapt")
                 apply("reque.android.library")
+                apply("reque.compose")
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")

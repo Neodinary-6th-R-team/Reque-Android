@@ -52,12 +52,17 @@ class AndroidApplicationConventionPlugin : Plugin<Project>{
                         buildConfig = true
                     }
 
+                    dataBinding {
+                        enable = true
+                    }
+
                     buildConfigField("String", "KAKAO_NATIVE_KEY", properties.getProperty("KAKAO_NATIVE_KEY"))
                     manifestPlaceholders["KAKAO_NATIVE_KEY"] = properties.getProperty("KAKAO_NATIVE_KEY")
                 }
 
                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
                 dependencies {
+                    add("implementation", project(":feature:splash"))
 
                     // Android Common
                     add("implementation", libs.findLibrary("androidx-core").get())

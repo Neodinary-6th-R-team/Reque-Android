@@ -32,6 +32,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
+                add("implementation", project(":common-ui"))
+
                 // Android Common
                 add("implementation", libs.findLibrary("androidx-core").get())
                 add("implementation", libs.findLibrary("androidx-appcompat").get())
