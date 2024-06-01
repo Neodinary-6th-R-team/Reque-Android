@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginLeft="14dp"
+            android:id="@+id/tv_point_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="내 포인트"
+            android:textSize="26sp"/>
+
+        <ImageView
+            app:layout_constraintEnd_toStartOf="@id/tv_point_num"
+            app:layout_constraintTop_toTopOf="@id/tv_point_num"
+            app:layout_constraintBottom_toBottomOf="@id/tv_point_num"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_point"
+            android:layout_marginEnd="8dp"
+            />
+
+        <TextView
+            android:layout_marginRight="14dp"
+            android:id="@+id/tv_point_num"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray600"
+            android:text="36"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/btn_use_point"
+            app:layout_constraintTop_toBottomOf="@id/tv_point_title"
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="사용하러 가기"
+            android:textSize="16sp"
+            android:background="@drawable/bg_rect_blue300_round12"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pretendard_semibold"
+            />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="gray100"
+            app:layout_constraintTop_toBottomOf="@id/btn_use_point"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="23dp"
+            />
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_line"
+            android:paddingStart="14dp"
+            android:id="@+id/tv_app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="앱 버전"
+            android:layout_marginTop="23dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_line"
+            android:paddingEnd="14dp"
+            android:id="@+id/tv_app_version_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/gray200"
+            android:text="6.4.1"
+            android:layout_marginTop="23dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_app_version"
+            android:paddingStart="14dp"
+            android:id="@+id/tv_service_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="서비스 이용약관"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_service_info"
+            android:paddingStart="14dp"
+            android:id="@+id/tv_privacy_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="개인정보 처리방침"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_privacy_info"
+            android:paddingStart="14dp"
+            android:id="@+id/tv_open_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="오픈소스 라이선스"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="gray100"
+            app:layout_constraintTop_toBottomOf="@id/tv_open_source"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="23dp"
+            />
+
+        <TextView
+            android:clickable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_line2"
+            android:paddingStart="14dp"
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="로그아웃"
+            android:layout_marginTop="23dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:clickable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_logout"
+            android:paddingStart="14dp"
+            android:id="@+id/btn_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/gray700"
+            android:text="회원탈퇴"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

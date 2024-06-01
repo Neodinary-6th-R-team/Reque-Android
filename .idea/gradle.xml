@@ -32,6 +32,7 @@
             <option value="$PROJECT_DIR$/feature/home" />
             <option value="$PROJECT_DIR$/feature/login" />
             <option value="$PROJECT_DIR$/feature/mission-record" />
+            <option value="$PROJECT_DIR$/feature/mypage" />
             <option value="$PROJECT_DIR$/feature/splash" />
           </set>
         </option>

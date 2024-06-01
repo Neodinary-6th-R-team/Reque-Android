@@ -66,6 +66,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project>{
                     add("implementation", project(":common-ui"))
                     add("implementation", project(":domain"))
                     add("implementation", project(":feature:dopamine"))
+                    add("implementation", project(":feature:mypage"))
 
                     // Android Common
                     add("implementation", libs.findLibrary("androidx-core").get())
