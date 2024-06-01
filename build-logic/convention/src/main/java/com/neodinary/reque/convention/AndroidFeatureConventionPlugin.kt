@@ -35,6 +35,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", project(":common-ui"))
                 add("implementation", project(":domain"))
 
+                add("implementation", libs.findLibrary("kakao-sdk").get())
+
                 // Android Common
                 add("implementation", libs.findLibrary("androidx-core").get())
                 add("implementation", libs.findLibrary("androidx-appcompat").get())
