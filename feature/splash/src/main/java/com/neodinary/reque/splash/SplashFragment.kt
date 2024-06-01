@@ -7,8 +7,10 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.neodinary.reque.common.ui.base.BaseFragment
 import com.neodinary.reque.common.ui.base.NavigationEvent
 import com.neodinary.reque.splash.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(){
     override val layoutResourceId: Int
         get() = R.layout.fragment_splash
@@ -32,5 +34,4 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(){
             }
         }
     }
-
 }

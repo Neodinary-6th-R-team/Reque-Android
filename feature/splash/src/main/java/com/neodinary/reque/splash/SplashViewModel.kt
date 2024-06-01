@@ -3,12 +3,15 @@ package com.neodinary.reque.splash
 import androidx.lifecycle.viewModelScope
 import com.neodinary.reque.common.ui.base.BaseViewModel
 import com.neodinary.reque.domain.usecase.GetAccessTokenUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SplashViewModel constructor(
+@HiltViewModel
+class SplashViewModel @Inject constructor(
     private val getAccessTokenUseCase: GetAccessTokenUseCase
 ) : BaseViewModel(){
 
@@ -32,6 +35,4 @@ class SplashViewModel constructor(
             }
         }
     }
-
-    // 로그인을 한 적이 없는지
 }

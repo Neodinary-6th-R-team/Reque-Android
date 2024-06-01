@@ -9,8 +9,10 @@ import com.kakao.sdk.user.UserApiClient
 import com.neodinary.reque.common.ui.base.BaseFragment
 import com.neodinary.reque.common.ui.logger.RequeLogger
 import com.neodinary.reque.login.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>() {
     override val layoutResourceId: Int
         get() = R.layout.fragment_login
