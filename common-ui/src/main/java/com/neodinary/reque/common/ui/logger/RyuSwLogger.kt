@@ -6,7 +6,7 @@ import android.util.Log
  * 로그 관리 object
  * 추후에 log trace에 사용
  * */
-object RyuSwLogger {
+object RequeLogger {
     /**
      * Debug에 필요한 로그
      * */
