@@ -6,4 +6,27 @@
     </style>
 
     <style name="Theme.Reque" parent="Base.Theme.Reque" />
+
+
+    <!-- Custom BottomNavigationView Style -->
+    <style name="CustomBottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_height">56dp</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationViewTextMedium</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationViewTextSemiBold</item>
+
+    </style>
+
+    <!-- BottomNavigationView 텍스트 스타일 -->
+    <style name="BottomNavigationViewTextMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+        <item name="android:textColor">#828AA1</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BottomNavigationViewTextSemiBold" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+        <item name="android:textColor">#4778FF</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
 </resources>
