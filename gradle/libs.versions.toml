@@ -1,5 +1,6 @@
 [versions]
 agp = "8.1.4"
+glideTransformations = "4.3.0"
 kotlin = "1.9.22"
 junit = "4.13.2"
 tedpermissionNormal = "3.3.0"
@@ -30,6 +31,7 @@ kakao = "2.20.1"
 [libraries]
 # Plugin
 android-pluginGradle = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+glide-transformations = { module = "jp.wasabeef:glide-transformations", version.ref = "glideTransformations" }
 kotlin-pluginGradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 # Test
