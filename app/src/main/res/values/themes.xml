@@ -10,7 +10,7 @@
 
     <!-- Custom BottomNavigationView Style -->
     <style name="CustomBottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
-        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_height">58dp</item>
         <item name="itemTextAppearanceInactive">@style/BottomNavigationViewTextMedium</item>
         <item name="itemTextAppearanceActive">@style/BottomNavigationViewTextSemiBold</item>
 
