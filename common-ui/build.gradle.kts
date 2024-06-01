@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.neodinary.reque.common"
 }
+
+dependencies {
+    implementation(libs.glide.transformations)
+}

@@ -18,7 +18,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 internal object NetworkModule {
 
-    private const val SERVER_BASE_URL = "https://api.themoviedb.org/3/"
+    private const val SERVER_BASE_URL = "https://port-0-reque-server-ss7z32llwvcl9qj.sel5.cloudtype.app/api/v1/"
 
     @Singleton
     @Provides
