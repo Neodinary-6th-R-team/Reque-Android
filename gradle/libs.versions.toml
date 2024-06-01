@@ -2,6 +2,7 @@
 agp = "8.1.4"
 kotlin = "1.9.22"
 junit = "4.13.2"
+tedpermissionNormal = "3.3.0"
 testJunit = "1.1.5"
 espresso = "3.5.1"
 androidxComposeBom = "2024.04.01"
@@ -103,6 +104,7 @@ glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = 
 # lifeCycle
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+tedpermission-normal = { module = "io.github.ParkSangGwon:tedpermission-normal", version.ref = "tedpermissionNormal" }
 
 [bundles]
 kotlinx-coroutine = ["kotlin-coroutine-core", "kotlin-coroutine-android"]

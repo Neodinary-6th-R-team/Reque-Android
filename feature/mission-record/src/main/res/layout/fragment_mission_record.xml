@@ -5,6 +5,15 @@
 
     <data>
 
+        <import type="android.net.Uri" />
+
+        <variable
+            name="vm"
+            type="com.neodinary.reque.mission.record.MissionRecordViewModel" />
+
+        <variable
+            name="captureImgUri"
+            type="Uri" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -93,12 +102,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView
-                android:id="@+id/iv_add_mission_img_background"
+                android:id="@+id/iv_mission_img"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_mission_picture_add"
+                android:scaleType="centerCrop"
+                app:imgUri="@{captureImgUri}"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -112,12 +123,14 @@
                 android:drawablePadding="6dp"
                 android:fontFamily="@font/pretendard_semibold"
                 android:gravity="center"
-                android:text="등록하기"
+                android:text="사진 추가"
                 android:textColor="@color/blue300"
-                app:layout_constraintBottom_toBottomOf="@id/iv_add_mission_img_background"
-                app:layout_constraintEnd_toEndOf="@id/iv_add_mission_img_background"
-                app:layout_constraintStart_toStartOf="@id/iv_add_mission_img_background"
-                app:layout_constraintTop_toTopOf="@id/iv_add_mission_img_background" />
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_mission_img"
+                app:layout_constraintEnd_toEndOf="@id/iv_mission_img"
+                app:layout_constraintStart_toStartOf="@id/iv_mission_img"
+                app:layout_constraintTop_toTopOf="@id/iv_mission_img"
+                app:onClick="@{() -> vm.startCapture()}" />
 
             <EditText
                 android:id="@+id/edit_mission"
@@ -136,7 +149,7 @@
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_add_mission_img_background" />
+                app:layout_constraintTop_toBottomOf="@id/iv_mission_img" />
 
 
             <Button

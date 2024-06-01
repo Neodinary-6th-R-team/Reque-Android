@@ -36,6 +36,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", project(":domain"))
 
                 add("implementation", libs.findLibrary("kakao-sdk").get())
+                add("implementation", libs.findLibrary("tedpermission-normal").get())
 
                 // Android Common
                 add("implementation", libs.findLibrary("androidx-core").get())
